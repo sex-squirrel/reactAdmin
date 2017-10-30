@@ -1,0 +1,319 @@
+
+$wrap-height: 100%;
+html, body, #root {
+  width: 100%;
+  height: $wrap-height;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, .2);
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+
+.wrap {
+  width: 100%;
+  height: $wrap-height;
+  overflow: hidden;
+  .loading {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .6);
+    .ant-spin-dot {
+      position: absolute;
+      top: 38%;
+      left: 50%;
+    
+      margin-left: -10px;
+    }
+
+   
+ }
+
+// index 样式
+.content {
+  position: relative;
+  box-sizing: border-box;
+  padding: 70px 0 0 200px;
+  height: 100%;
+  background: rgb(244, 244, 244);
+  z-index: 10;
+  .side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 200px;
+    height: $wrap-height;
+    background: #404040;
+    transition: width .3s;
+    >ul {
+      height: $wrap-height;
+      overflow-y: auto;
+    }
+  }
+
+  .logo {
+    width: 90%;
+    color: #ffffff;
+    margin: 20px auto 0;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 30px;
+    > img{
+      width: 48px;
+      height: 48px;
+      vertical-align: middle;
+    }
+    >span{
+      position: relative;
+      top: 5px;
+      opacity: 1;
+      transition: all .3s;
+    }
+  }
+
+  .head {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 200px;
+    transition: all .3s;
+  }
+
+  .top-bar {
+    height: 70px;
+    background: #ffffff;
+    font-size: 25px;
+    line-height: 70px;
+    position: relative;
+    z-index: 1;
+    .title {
+      margin-left: 25px;
+    }
+    .login-out{
+      font-size: 14px; 
+      position: absolute;
+      right: 20px;
+      bottom: -10px;
+      z-index: 10;
+      cursor: pointer;
+      color: #72ACE3;
+    }
+  }
+
+  .section {
+    width: 100%;
+    position: relative;
+    height: $wrap-height;
+    padding: 10px;
+    transition: all .3s;
+  }
+
+  .section-content {
+    width: 100%;
+    background: #FFF;
+    height: 100%;
+    border-radius: 3px;
+    padding: 15px 20px;
+    overflow: auto;
+    overflow-x: hidden;
+    transition: all .3s;
+  }
+
+  .table-content {
+    width: 100%;
+    transition: all .3s;
+    .item-top {
+      margin-top: 15px;
+    }
+   .tabs{
+     margin: 20px auto 0;
+   }
+  }
+}
+
+  //login 样式
+  .login {
+    width: 500px;
+    height: 300px;
+    margin: 150px auto 0;
+    .login-buttons {
+      padding-left: 50px;
+      &>button {
+        margin-left: 45px
+      }
+    }
+  }
+
+  //创建房源
+  .create-wrap{
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  //图片列表
+  .pic-list{
+    padding:20px 20px;
+    .pic-col{
+      padding: 0 0 15px 15px !important;
+      width: 135px;
+      height: 135px;
+      float: left;
+      .pic{
+        position: relative;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        cursor: pointer;
+        img{
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+    
+  }
+  
+}
+.my-progress {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, .3);
+  .ant-progress-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 27px !important;
+  }
+}
+.success-button{
+    background: green;
+    color: #FFF;
+    &:hover{
+      border: 1px solid green;
+      background: green;
+      color: #FFF;
+    }
+    &:active{
+      border: 1px solid green;
+      background: green;
+      color: #FFF;
+    }
+    &:focus{
+      border: 1px solid green;
+      background: green;
+      color: #FFF;
+    }
+  }
+
+
+.ant-upload-select-picture-card i {
+  font-size: 28px;
+  color: #999;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+  font-size: 12px;
+  color: #666;
+}
+.default{
+  width: 120px;
+  height: 120px;
+  font-size: 20px;
+  line-height: 120px;
+  text-align: center;
+  background: #CCC;
+  color: #FFF;
+}
+.pic-operation{
+  position: absolute;
+  height: 40px;
+  width: 120px;
+  bottom: -50px;
+  left: 0;
+  background: rgba(0,0,0, .3);
+  color: #FFF;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  &:hover span{
+    color: #49a9ee;
+  }
+}
+.pic{
+  &:hover .pic-operation{
+      bottom: 0;
+  }
+  &:hover .pic-remove{
+      opacity: 0;
+  }
+}
+
+.checked{
+  position: absolute;
+  z-index: 2;
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+  top: 0;
+  right: 0;
+}
+.no-check{
+  position: absolute;
+  z-index: 2;
+  font-size: 30px;
+  font-weight: bold;
+  color: #CCC;
+  top: 0;
+  right: 0;
+}
+.pic-remove{
+  position: absolute;
+  height: 40px;
+  width: 120px;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0, .3);
+  opacity: 1;
+  color: #FFF;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.check-pic{
+  img{
+    width: 120px;
+    height: 120px;
+  }
+}
